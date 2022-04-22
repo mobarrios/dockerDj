@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            {% block title %} 
+            {% endblock %}
+        </title>
+    </head>
+    <body>
+
+        {% include 'navbar.html' %}
+
+        <h1>Ejemplo</h1>
+        <h3>Datos de web</h3>
+
+        {% block content %}
+        {% endblock%}
+    </body>
+    <footer>
+        <small>Footer</small>
+    </footer>
+</html>

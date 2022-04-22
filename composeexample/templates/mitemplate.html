@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    
+    {% include 'navbar.html' %}
+
+    <h1>Hola!  {{persona.nombre.upper}}, {{persona.apellido.upper}}</h1>
+    <h3>Pedazo de Maraca.</h3>
+    <!-- if valida si exite y si tiene datos  -->
+    {% if persona.lista%}
+        {% for  list in persona.lista %}
+         <!-- filto -->
+            <h5>{{list}}</h5>
+        {% endfor %}
+    {% else %}
+        No se encontraron datos!
+    {% endif %}
+</html>

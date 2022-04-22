@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'gestor',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,8 @@ ROOT_URLCONF = 'composeexample.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        #directorio de los templates
+        'DIRS': ['/code/gestor/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

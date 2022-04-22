@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Pagina Hija 1
+{% endblock %}
+
+{% block content %}
+    Usuario : {{ user.nombre.upper}} , {{ user.apellido.upper}} <br>
+    Contenido de la Pagina 1 ....
+{% comment %} 
+        <form action='/search/' method="POST"> {% csrf_token %}
+            <input type="text" name="input"/>
+            <input type="submit" value='go'/>
+        </form> {% endcomment %}
+        {% if form.errors %}
+            <h1>ERROR<h1/>
+        {% endif %}
+        <form action='/search/' method="POST"> 
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+        </form>
+{% endblock %}
